@@ -91,3 +91,27 @@ button {
     padding: 0 10px;
   }
 }
+
+/*header*/
+.header__container {
+  background-image: url("img/start-screen-gradient-background.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 90px;
+}
+
+.header__logo-wrapper {
+  display: flex;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+/*hero section*/
+.hero__container {
+  background-image: url("img/start-screen-gradient-background.svg");
+  background-size: cover;
+}

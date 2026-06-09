@@ -24,7 +24,7 @@ h4 {
 }
 
 h2 {
-  font-size: 35x;
+  font-size: 35px;
   letter-spacing: 0.06rem;
 }
 
@@ -201,6 +201,12 @@ button {
   padding: 80px 40px 100px 40px;
 }
 
+.about__img {
+  width: 300px;
+  height: 408px;
+  object-fit: cover;
+}
+
 .about__content {
   display: flex;
   flex-direction: column;
@@ -328,4 +334,63 @@ button {
   line-height: 1.15;
   font-weight: 400;
   letter-spacing: 0.06rem;
+}
+
+/*donation section*/
+.donation__container {
+  display: flex;
+  gap: 30px;
+  padding: 80px 182px 100px 183px;
+  background-color: #f6f6f6;
+}
+
+.donation__img {
+  width: 505px;
+  height: 261px;
+  object-fit: cover;
+}
+
+.donation__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donation__heading {
+  color: #545454;
+}
+
+.donation__paragraph-top {
+  color: #b2b2b2;
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}
+
+.donation__paragraph-middle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  background-color: #f1cdb3;
+  border-radius: 9px;
+  color: #545454;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}
+
+.donation__card {
+  display: inline-block;
+}
+
+.donation__paragraph-bottom {
+  color: #B2B2B2;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-style: italic;
 }

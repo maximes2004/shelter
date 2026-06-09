@@ -11,46 +11,113 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <div class="header__logo-wrapper">
-          <div class="header__logo-title">Cozy House</div>
-          <div class="header__logo-subtitle">Shelter for pets in Boston</div>
+        <div class="header__top-container">
+          <div class="header__logo-wrapper">
+            <h3 class="header__logo-title">Cozy House</h3>
+            <div class="header__logo-subtitle">Shelter for pets in Boston</div>
+          </div>
+          <div class="header__burger-wrapper">
+            <input
+              type="checkbox"
+              id="burger-checkbox"
+              class="header__burger-checkbox visually-hidden"
+            />
+            <label for="burger-checkbox" class="header__burger-btn">
+              <span class="header__burger-dash"></span>
+              <span class="header__burger-dash"></span>
+              <span class="header__burger-dash"></span>
+            </label>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="" class="header__nav-link">About the shelter</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="" class="header__nav-link">Our pets</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="" class="header__nav-link">Help the shelter</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="" class="header__nav-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="header__burger-wrapper">
-          <input
-            type="checkbox"
-            id="burger-checkbox"
-            class="header__burger-checkbox visually-hidden"
-          />
-          <label for="burger-checkbox" class="header__burger-btn">
-            <span class="header__burger-dash"></span>
-            <span class="header__burger-dash"></span>
-            <span class="header__burger-dash"></span>
-          </label>
-        </div>
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a href="" class="header__nav-link">About the shelter</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="" class="header__nav-link">Our pets</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="" class="header__nav-link">Help the shelter</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="" class="header__nav-link">Contacts</a>
-            </li>
-          </ul>
-        </nav>
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__content">
+              <h1 class="hero__heading">
+                Not only people <br />
+                need a house
+              </h1>
+              <p class="hero__subheading">
+                We offer to give a chance to a little and nice puppy with an
+                extremely wide and open heart. He or she will love you more than
+                anybody else in the world, you will see!
+              </p>
+              <button class="hero__btn">Make a friend</button>
+            </div>
+            <img
+              class="hero__img"
+              src="img/start-screen-puppy.png"
+              alt="start-screen-puppy"
+            />
+          </div>
+        </section>
       </div>
     </header>
 
     <main class="">
-      <section class="hero">
-        <div class="container hero__container">
-          <div class="hero__content"></div>
-          <div class="hero__img"></div>
+      <section class="about">
+        <div class="container about__container">
+          <img class="about__img" src="img/about-pets.png" alt="" />
+          <div class="about__content">
+            <h2 class="about__heading">About the shelter “Cozy House”</h2>
+            <p class="about__paragraph">
+              Currently we have 121 dogs and 342 cats on our hands and
+              statistics show that only 20% of them will find a family. The
+              others will continue to live with us and will be waiting for a
+              lucky chance to become dearly loved.
+            </p>
+            <p class="about__paragraph">
+              We feed our wards with the best food and make sure that they do
+              not get sick, feel comfortable (including psychologically) and
+              well. We are supported by 87 volunteers and 28 employees of
+              various skill levels. About 12% of the animals are taken by the
+              shelter staff. Taking care of the animals, they become attached to
+              the pets and would hardly ever leave them alone.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="pets">
+        <div class="container pets__container">
+          <h2 class="pets_heading">
+            Our friends who <br />
+            are looking for a house
+          </h2>
+          <div class="pets__slider">
+            <button class="pets__arrow pets__arrow--left" aria-label="Предыдущий слайд"></button>
+            <div class="pets__card pet-card">
+              <img class="pet-card__img" src="img/pets-katrine.png" alt="" />
+              <h3 class="pet-card__name">Katrine</h3>
+              <button class="pet-card__btn">Learn more</button>
+            </div>
+            <div class="pets__card pet-card">
+              <img class="pet-card__img" src="img/pets-jennifer.png" alt="" />
+              <h3 class="pet-card__name">Jennifer</h3>
+              <button class="pet-card__btn">Learn more</button>
+            </div>
+            <div class="pets__card pet-card">
+              <img class="pet-card__img" src="img/pets-woody.png" alt="" />
+              <h3 class="pet-card__name">Woody</h3>
+              <button class="pet-card__btn">Learn more</button>
+            </div>
+            <button class="pets__arrow pets__arrow--right" aria-label="Следующий слайд"></button>
+          </div>
+          <button class="pets__btn">Get to know the rest</button>
         </div>
       </section>
     </main>

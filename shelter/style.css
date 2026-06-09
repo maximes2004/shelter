@@ -292,3 +292,40 @@ button {
   background-color: #f1cdb3;
   padding: 15px 45px;
 }
+
+/*help section*/
+.help__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 40px 100px 40px;
+}
+
+.help__list {
+  display: flex;
+  column-gap: 120px;
+  row-gap: 55px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.help__item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.help__img {
+  width: 60px;
+  height: 60px;
+}
+
+.help__item-name {
+  color: #545454;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}

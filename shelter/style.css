@@ -1,6 +1,18 @@
+/* Добавляем явное перечисление базовых тегов, чтобы дать им силу в 1 балл */
 *,
 *::before,
-*::after {
+*::after,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,9 +36,14 @@ h4 {
   font-weight: inherit;
 }
 
+h1 {
+  font-size: 44px;
+  letter-spacing: 0.06em;
+}
+
 h2 {
   font-size: 35px;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
 }
 
 ul,
@@ -59,10 +76,14 @@ button {
   background-color: transparent;
   font-family: inherit;
   cursor: pointer;
-  font-size: 17x;
+  font-size: 17px;
   line-height: 1.3;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
   border-radius: 26px;
+}
+
+address {
+  font-style: normal;
 }
 
 .visually-hidden {
@@ -122,19 +143,23 @@ button {
 .header__logo-title {
   font-size: 32px;
   line-height: 1.1;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
   color: #f1cdb3;
 }
 
 .header__logo-subtitle {
+  font-family: "Arial", sans-serif;
   font-size: 13px;
-  line-height: 1;
-  letter-spacing: 0.1rem;
+  line-height: 15px;
+  letter-spacing: 0.1em;
   color: #ffffff;
+  padding-left: 4px;
 }
 
 .header__nav {
   color: #cdcdcd;
+  display: flex;
+  align-items: center;
 }
 
 .header__nav-list {
@@ -143,6 +168,7 @@ button {
   font-size: 15px;
   line-height: 1.6;
   letter-spacing: 0;
+  font-family: "Arial", sans-serif;
 }
 
 .header__nav-item:first-child {
@@ -164,16 +190,12 @@ button {
 }
 
 .hero__heading {
-  font-size: 44x;
   line-height: 1.3;
   letter-spacing: 0;
   color: #ffffff;
 }
 
 .hero__subheading {
-  font-size: 15x;
-  line-height: 1.6;
-  letter-spacing: 0;
   color: #cdcdcd;
 }
 
@@ -182,9 +204,6 @@ button {
   background-color: #f1cdb3;
   align-self: flex-start;
   padding: 15px 45px;
-}
-
-.hero__img {
 }
 
 /*about section*/
@@ -227,10 +246,10 @@ button {
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f6;
-  padding: 80px 40px 100px 40px;
+  padding: 80px 40px 101px 40px;
 }
 
-.pets_heading {
+.pets__heading {
   text-align: center;
   color: #545454;
 }
@@ -243,26 +262,30 @@ button {
 .pet-card {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 29px;
   align-items: center;
   background-color: #fafafa;
   min-width: 270px;
   margin-left: 45px;
   margin-right: 45px;
   border-radius: 9px;
+  padding-bottom: 30px;
 }
 
 .pet-card__name {
   color: #545454;
   font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0.06rem;
+  line-height: 23px;
+  letter-spacing: 0.06em;
 }
 
 .pet-card__btn {
   color: #292929;
   border: 2px solid #f1cdb3;
-  padding: 15px 45px;
+  padding: 15px 43px;
+  height: 52px;
+  display: flex;
+  align-items: center;
 }
 
 .pets__arrow {
@@ -289,6 +312,7 @@ button {
   color: #292929;
   background-color: #f1cdb3;
   padding: 15px 45px;
+  line-height: 22px;
 }
 
 /*help section*/
@@ -298,6 +322,11 @@ button {
   gap: 60px;
   align-items: center;
   padding: 80px 40px 100px 40px;
+}
+
+.help__heading {
+  text-align: center;
+  line-height: 1.28;
 }
 
 .help__list {
@@ -324,7 +353,7 @@ button {
   color: #545454;
   font-size: 20px;
   line-height: 1.15;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
 }
 
 /*donation section*/
@@ -339,6 +368,7 @@ button {
   width: 505px;
   height: 261px;
   object-fit: cover;
+  margin-top: 11px;
 }
 
 .donation__content {
@@ -352,10 +382,11 @@ button {
 }
 
 .donation__paragraph-top {
-  color: #b2b2b2;
+  color: #545454;
   font-size: 15px;
   line-height: 1.1;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
 }
 
 .donation__paragraph-middle {
@@ -368,7 +399,9 @@ button {
   color: #545454;
   font-size: 20px;
   line-height: 1.15;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
+  font-family: "Georgia", serif;
+  width: max-content;
 }
 
 .donation__card {
@@ -388,7 +421,7 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 160px;
-  padding: 56px 40px 0px 40px;
+  padding: 40px 40px 0px 40px;
   background-image: url("img/start-screen-gradient-background.svg");
   background-size: cover;
 }
@@ -396,6 +429,7 @@ button {
 .footer__info {
   display: flex;
   gap: 160px;
+  padding-top: 16px;
 }
 
 .footer__contacts {
@@ -408,7 +442,7 @@ button {
   color: #ffffff;
   font-size: 35px;
   line-height: 1.3;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
 }
 
 .footer__title-2 {
@@ -425,11 +459,15 @@ button {
   display: flex;
   align-items: center;
   gap: 20px;
-  min-width: 278px;
-  color: #F1CDB3;
+  min-width: 279px;
+  color: #f1cdb3;
   font-size: 20px;
   line-height: 1.15;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.06em;
+}
+
+.footer__item-single {
+  line-height: 32px;
 }
 
 .footer__ico {

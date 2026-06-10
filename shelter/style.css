@@ -71,7 +71,11 @@ img {
   display: block; /*Убирает дефолтный отступ снизу у картинок*/
 }
 
-button {
+address {
+  font-style: normal;
+}
+
+.btn {
   border: none;
   background-color: transparent;
   font-family: inherit;
@@ -80,10 +84,6 @@ button {
   line-height: 1.3;
   letter-spacing: 0.06em;
   border-radius: 26px;
-}
-
-address {
-  font-style: normal;
 }
 
 .visually-hidden {

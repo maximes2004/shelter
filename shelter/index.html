@@ -12,12 +12,12 @@
     <header class="header">
       <div class="container header__container">
         <div class="header__top-container">
-          <div class="header__logo-wrapper">
+          <a class="header__logo-wrapper" href="#">
             <h3 class="header__logo-title">Cozy House</h3>
             <span class="header__logo-subtitle"
               >Shelter for pets in Boston</span
             >
-          </div>
+          </a>
           <div class="header__burger-wrapper">
             <input
               type="checkbox"
@@ -33,16 +33,16 @@
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a href="" class="header__nav-link">About the shelter</a>
+                <a href="#about" class="header__nav-link">About the shelter</a>
               </li>
               <li class="header__nav-item">
-                <a href="" class="header__nav-link">Our pets</a>
+                <a href="pets.html" class="header__nav-link">Our pets</a>
               </li>
               <li class="header__nav-item">
-                <a href="" class="header__nav-link">Help the shelter</a>
+                <a href="#help" class="header__nav-link">Help the shelter</a>
               </li>
               <li class="header__nav-item">
-                <a href="" class="header__nav-link">Contacts</a>
+                <a href="#contacts" class="header__nav-link">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -59,7 +59,7 @@
                 extremely wide and open heart. He or she will love you more than
                 anybody else in the world, you will see!
               </p>
-              <button class="hero__btn">Make a friend</button>
+              <a class="btn hero__btn" href="#friends">Make a friend</a>
             </div>
             <img
               class="hero__img"
@@ -72,7 +72,7 @@
     </header>
 
     <main class="main main__index">
-      <section class="about">
+      <section id="about" class="about">
         <div class="container about__container">
           <img class="about__img" src="img/about-pets.png" alt="about-pets" />
           <div class="about__content">
@@ -97,7 +97,7 @@
           </div>
         </div>
       </section>
-      <section class="pets">
+      <section id="friends" class="pets">
         <div class="container pets__container">
           <h2 class="pets__heading">
             Our friends who <br />
@@ -115,7 +115,7 @@
                 alt="pets-katrine"
               />
               <h3 class="pet-card__name">Katrine</h3>
-              <button class="pet-card__btn">Learn more</button>
+              <button class="btn pet-card__btn">Learn more</button>
             </div>
             <div class="pets__card pet-card">
               <img
@@ -124,7 +124,7 @@
                 alt="pets-jennifer"
               />
               <h3 class="pet-card__name">Jennifer</h3>
-              <button class="pet-card__btn">Learn more</button>
+              <button class="btn pet-card__btn">Learn more</button>
             </div>
             <div class="pets__card pet-card">
               <img
@@ -133,17 +133,17 @@
                 alt="pets-woody"
               />
               <h3 class="pet-card__name">Woody</h3>
-              <button class="pet-card__btn">Learn more</button>
+              <button class="btn pet-card__btn">Learn more</button>
             </div>
             <button
               class="pets__arrow pets__arrow--right"
               aria-label="Следующий слайд"
             ></button>
           </div>
-          <button class="pets__btn">Get to know the rest</button>
+          <a class="btn pets__btn" href="pets.html">Get to know the rest</a>
         </div>
       </section>
-      <section class="help">
+      <section id="help" class="help">
         <div class="container help__container">
           <h2 class="help__heading">
             How you can help <br />
@@ -236,13 +236,13 @@
             <p class="donation__paragraph-top">
               Name of the bank / Type of bank account
             </p>
-            <p class="donation__paragraph-middle">
+            <a href="#" class="donation__paragraph-middle">
               <img
                 class="donation__card"
                 src="img/credit-card.png"
                 alt="credit-card-icon"
               />8380 2880 8028 8791 7435
-            </p>
+            </a>
             <p class="donation__paragraph-bottom">
               Legal information and lorem ipsum dolor sit amet, consectetur
               adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed
@@ -253,7 +253,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer id="contacts" class="footer">
       <div class="container footer__container">
         <address class="footer__info">
           <div class="footer__contacts">
@@ -261,7 +261,9 @@
               For questions <br />
               and suggestions
             </h3>
-            <a class="footer__item footer__item-single" href="mailto:email@shelter.com"
+            <a
+              class="footer__item footer__item-single"
+              href="mailto:email@shelter.com"
               ><img
                 class="footer__ico"
                 src="img/icon-mail.png"
@@ -280,20 +282,28 @@
             <h3 class="footer__title footer__title-2">
               We are waiting for your visit
             </h3>
-            <span class="footer__item footer__item-double"
+            <a
+              class="footer__item footer__item-double"
+              href="https://www.google.com/maps/search/?api=1&query=1+Central+Street,+Boston"
+              target="_blank"
+              rel="noopener noreferrer"
               ><img
                 class="footer__ico"
                 src="img/icon-marker.png"
                 alt="icon-marker"
               />1 Central Street, Boston <br />
-              (entrance from the store)</span
+              (entrance from the store)</a
             >
-            <span class="footer__item footer__item-single"
+            <a
+              class="footer__item footer__item-single"
+              href="https://www.google.com/maps/search/?api=1&query=18+South+Park,+London"
+              target="_blank"
+              rel="noopener noreferrer"
               ><img
                 class="footer__ico"
                 src="img/icon-marker.png"
                 alt="icon-marker"
-              />18 South Park, London</span
+              />18 South Park, London</a
             >
           </div>
         </address>

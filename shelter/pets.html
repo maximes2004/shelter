@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our pets</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__top-container">
+          <a class="header__logo-wrapper" href="index.html">
+            <h3 class="header__logo-title">Cozy House</h3>
+            <span class="header__logo-subtitle"
+              >Shelter for pets in Boston</span
+            >
+          </a>
+          <div class="header__burger-wrapper">
+            <input
+              type="checkbox"
+              id="burger-checkbox"
+              class="header__burger-checkbox visually-hidden"
+            />
+            <label for="burger-checkbox" class="header__burger-btn">
+              <span class="header__burger-dash"></span>
+              <span class="header__burger-dash"></span>
+              <span class="header__burger-dash"></span>
+            </label>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="index.html" class="header__nav-link"
+                  >About the shelter</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Our pets</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="index.html#help" class="header__nav-link"
+                  >Help the shelter</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a href="#contacts" class="header__nav-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main main__index"></main>
+    <footer id="footer" class="footer">
+      <div class="container footer__container">
+        <address class="footer__info">
+          <div class="footer__contacts">
+            <h3 class="footer__title footer__title-1">
+              For questions <br />
+              and suggestions
+            </h3>
+            <a
+              class="footer__item footer__item-single"
+              href="mailto:email@shelter.com"
+              ><img
+                class="footer__ico"
+                src="img/icon-mail.png"
+                alt="icon-email"
+              />email@shelter.com</a
+            >
+            <a class="footer__item footer__item-single" href="tel:+136745677554"
+              ><img
+                class="footer__ico"
+                src="img/icon-phone.png"
+                alt="icon-phone"
+              />+13 674 567 75 54</a
+            >
+          </div>
+          <div class="footer__addresses">
+            <h3 class="footer__title footer__title-2">
+              We are waiting for your visit
+            </h3>
+            <a
+              class="footer__item footer__item-double"
+              href="https://www.google.com/maps/search/?api=1&query=1+Central+Street,+Boston"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="footer__ico"
+                src="img/icon-marker.png"
+                alt="icon-marker"
+              />1 Central Street, Boston <br />
+              (entrance from the store)</a
+            >
+            <a
+              class="footer__item footer__item-single"
+              href="https://www.google.com/maps/search/?api=1&query=18+South+Park,+London"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="footer__ico"
+                src="img/icon-marker.png"
+                alt="icon-marker"
+              />18 South Park, London</a
+            >
+          </div>
+        </address>
+        <img
+          class="footer__puppy"
+          src="img/footer-puppy.png"
+          alt="footer-puppy"
+        />
+      </div>
+    </footer>
+  </body>
+</html>

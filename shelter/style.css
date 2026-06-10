@@ -171,9 +171,11 @@ address {
   font-family: "Arial", sans-serif;
 }
 
-.header__nav-item:first-child {
+.header__nav-link--inactive {
   color: #fafafa;
   border-bottom: 3px solid #f1cdb3;
+  pointer-events: none;
+  cursor: default;
 }
 
 /*hero section in header*/

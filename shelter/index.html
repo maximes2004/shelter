@@ -33,7 +33,11 @@
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a href="#about" class="header__nav-link header__nav-link--inactive">About the shelter</a>
+                <a
+                  href="#about"
+                  class="header__nav-link header__nav-link--index-current"
+                  >About the shelter</a
+                >
               </li>
               <li class="header__nav-item">
                 <a href="pets.html" class="header__nav-link">Our pets</a>
@@ -71,7 +75,7 @@
       </div>
     </header>
 
-    <main class="main main__index">
+    <main class="main main--index">
       <section id="about" class="about">
         <div class="container about__container">
           <img class="about__img" src="img/about-pets.png" alt="about-pets" />
@@ -105,38 +109,40 @@
           </h2>
           <div class="pets__slider">
             <button
-              class="pets__arrow pets__arrow--left"
+              class="pets-arrow pets-arrow--left"
               aria-label="Предыдущий слайд"
             ></button>
-            <div class="pets__card pet-card">
-              <img
-                class="pet-card__img"
-                src="img/pets-katrine.png"
-                alt="pets-katrine"
-              />
-              <h3 class="pet-card__name">Katrine</h3>
-              <button class="btn pet-card__btn">Learn more</button>
-            </div>
-            <div class="pets__card pet-card">
-              <img
-                class="pet-card__img"
-                src="img/pets-jennifer.png"
-                alt="pets-jennifer"
-              />
-              <h3 class="pet-card__name">Jennifer</h3>
-              <button class="btn pet-card__btn">Learn more</button>
-            </div>
-            <div class="pets__card pet-card">
-              <img
-                class="pet-card__img"
-                src="img/pets-woody.png"
-                alt="pets-woody"
-              />
-              <h3 class="pet-card__name">Woody</h3>
-              <button class="btn pet-card__btn">Learn more</button>
+            <div class="pets__cards-wrapper">
+              <div class="pets__card pet-card">
+                <img
+                  class="pet-card__img"
+                  src="img/pets-katrine.png"
+                  alt="pets-katrine"
+                />
+                <h3 class="pet-card__name">Katrine</h3>
+                <button class="btn pet-card__btn">Learn more</button>
+              </div>
+              <div class="pets__card pet-card">
+                <img
+                  class="pet-card__img"
+                  src="img/pets-jennifer.png"
+                  alt="pets-jennifer"
+                />
+                <h3 class="pet-card__name">Jennifer</h3>
+                <button class="btn pet-card__btn">Learn more</button>
+              </div>
+              <div class="pets__card pet-card">
+                <img
+                  class="pet-card__img"
+                  src="img/pets-woody.png"
+                  alt="pets-woody"
+                />
+                <h3 class="pet-card__name">Woody</h3>
+                <button class="btn pet-card__btn">Learn more</button>
+              </div>
             </div>
             <button
-              class="pets__arrow pets__arrow--right"
+              class="pets-arrow pets-arrow--right"
               aria-label="Следующий слайд"
             ></button>
           </div>

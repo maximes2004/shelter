@@ -9,12 +9,12 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div class="container header__container">
+    <header class="header header--our-pets">
+      <div class="container header__container header__container--our-pets">
         <div class="header__top-container">
           <a class="header__logo-wrapper" href="index.html">
-            <h3 class="header__logo-title">Cozy House</h3>
-            <span class="header__logo-subtitle"
+            <h3 class="header__logo-title header__logo-title--our-pets">Cozy House</h3>
+            <span class="header__logo-subtitle header__logo-subtitle--our-pets"
               >Shelter for pets in Boston</span
             >
           </a>
@@ -31,14 +31,16 @@
             </label>
           </div>
           <nav class="header__nav">
-            <ul class="header__nav-list">
+            <ul class="header__nav-list header__nav-list--our-pets">
               <li class="header__nav-item">
                 <a href="index.html" class="header__nav-link"
                   >About the shelter</a
                 >
               </li>
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link header__nav-link--inactive">Our pets</a>
+                <a href="#" class="header__nav-link header__nav-link--pets-current"
+                  >Our pets</a
+                >
               </li>
               <li class="header__nav-item">
                 <a href="index.html#help" class="header__nav-link"
@@ -53,10 +55,98 @@
         </div>
       </div>
     </header>
-    <main class="main main__index">
-      
+    <main class="main main--our-pets">
+      <section class="our-pets">
+        <div class="container our-pets__container">
+          <h1 class="our-pets__heading">
+            Our friends who <br />
+            are looking for a house
+          </h1>
+          <div class="our-pets__cards">
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-katrine.png"
+                alt="pets-katrine"
+              />
+              <h3 class="pet-card__name">Katrine</h3>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-jennifer.png"
+                alt="pets-jennifer"
+              />
+              <h3 class="pet-card__name">Jennifer</h3>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-woody.png"
+                alt="pets-woody"
+              />
+              <h3 class="pet-card__name">Woody</h3>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-sophia.png"
+                alt="pets-sophia"
+              />
+              <h3 class="pet-card__name">Sophia</h3>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-timmy.png"
+                alt="pets-timmy"
+              />
+              <h3 class="pet-card__name">Timmy</h3>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-charly.png"
+                alt="pets-charly"
+              />
+              <h3 class="pet-card__name">Charly</h3>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-scarlett.png"
+                alt="pets-scarlett"
+              />
+              <h3 class="pet-card__name">Scarlett</h3>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-freddie.png"
+                alt="pets-freddie"
+              />
+              <h3 class="pet-card__name">Freddie</h3>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+          </div>
+          <nav class="our-pets__nav">
+            <button class="pets-arrow pets-arrow--our-pets pets-arrow--tostart pets-arrow--inactive"><<</button>
+            <button class="pets-arrow pets-arrow--our-pets pets-arrow--prev pets-arrow--inactive"><</button>
+            <span class="pets-arrow pets-arrow--our-pets pets-arrow--page">1</span>
+            <button class="pets-arrow pets-arrow--our-pets pets-arrow--next">></button>
+            <button class="pets-arrow pets-arrow--our-pets pets-arrow--toend">>></button>
+          </nav>
+        </div>
+      </section>
     </main>
-    <footer id="footer" class="footer">
+    <footer id="contacts" class="footer">
       <div class="container footer__container">
         <address class="footer__info">
           <div class="footer__contacts">

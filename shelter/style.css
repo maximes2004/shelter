@@ -131,7 +131,7 @@ address {
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
 }
 
 .header__logo-wrapper {
@@ -182,6 +182,7 @@ address {
 .hero__container {
   display: flex;
   gap: 42px;
+  padding-top: 60px;
 }
 
 .hero__content {

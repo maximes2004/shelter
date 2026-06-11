@@ -134,7 +134,7 @@ address {
 }*/
 
 /*header*/
-.header {
+.header--index {
   background-image: url("img/start-screen-gradient-background.svg");
   background-size: cover;
 }

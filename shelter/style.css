@@ -134,7 +134,7 @@ address {
 }*/
 
 /*header*/
-.header__container {
+.header {
   background-image: url("img/start-screen-gradient-background.svg");
   background-size: cover;
 }
@@ -259,12 +259,15 @@ address {
 }
 
 /*pets section*/
+.pets {
+  background-color: #f6f6f6;
+}
+
 .pets__container {
   display: flex;
   gap: 60px;
   flex-direction: column;
   align-items: center;
-  background-color: #f6f6f6;
   padding: 80px 40px 101px 40px;
 }
 
@@ -397,11 +400,14 @@ address {
 }
 
 /*donation section*/
+.donation {
+  background-color: #f6f6f6;
+}
+
 .donation__container {
   display: flex;
   gap: 30px;
   padding: 80px 182px 100px 183px;
-  background-color: #f6f6f6;
 }
 
 .donation__img {
@@ -461,13 +467,16 @@ address {
 }
 
 /*footer*/
+.footer {
+  background-image: url("img/start-screen-gradient-background.svg");
+  background-size: cover;
+}
+
 .footer__container {
   display: flex;
   justify-content: space-between;
   gap: 160px;
   padding: 40px 40px 0px 40px;
-  background-image: url("img/start-screen-gradient-background.svg");
-  background-size: cover;
 }
 
 .footer__info {
@@ -542,6 +551,10 @@ address {
   cursor: default;
 }
 
+.our-pets {
+  background-color: #f6f6f6;
+}
+
 .our-pets__container {
   display: flex;
   flex-direction: column;
@@ -549,7 +562,6 @@ address {
   gap: 45px;
   padding-top: 80px;
   padding-bottom: 102px;
-  background-color: #f6f6f6;
 }
 
 .our-pets__heading {

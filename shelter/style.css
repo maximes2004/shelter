@@ -134,7 +134,9 @@ address {
 .pet-card__btn,
 .pets-arrow:not(.pets-arrow--inactive),
 .pets__btn,
-.donation__paragraph-middle {
+.donation__paragraph-middle,
+.header__nav-link--index,
+.header__nav-link--our-pets {
   transition: all 0.3s ease;
 }
 
@@ -228,6 +230,10 @@ address {
   line-height: 1.6;
   letter-spacing: 0;
   font-family: 'LocalArial', 'Arial', sans-serif;
+}
+
+.header__nav-link--index:not(.header__nav-link--index-current):hover {
+  color: #FAFAFA;
 }
 
 .header__nav-link--index-current {
@@ -588,6 +594,10 @@ address {
 }
 
 .header__logo-subtitle--our-pets {
+  color: #292929;
+}
+
+.header__nav-link--our-pets:not(.header__nav-link--pets-current):hover {
   color: #292929;
 }
 

@@ -822,4 +822,5 @@ address {
 .pets-arrow--inactive {
   color: #cdcdcd;
   border-color: #cdcdcd;
+  pointer-events: none;
 }

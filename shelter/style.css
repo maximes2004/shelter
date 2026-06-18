@@ -1,4 +1,4 @@
-/**Подключения локальных шрифтов/
+/*Подключения локальных шрифтов*/
 
 /*Regular (Обычный)*/
 @font-face {
@@ -381,12 +381,13 @@ address {
   gap: 60px;
   flex-direction: column;
   align-items: center;
-  padding: 80px 40px 101px 40px;
+  padding: 80px 40px 100px 40px;
 }
 
 .pets__heading {
   text-align: center;
   color: #545454;
+  max-height: 90px;
 }
 
 .pets__slider {
@@ -403,10 +404,11 @@ address {
 .pet-card {
   display: flex;
   flex-direction: column;
-  gap: 29px;
+  gap: 30px;
   align-items: center;
   background-color: #fafafa;
   min-width: 270px;
+  min-height: 435px;
   border-radius: 9px;
   padding-bottom: 30px;
   outline: 2px solid transparent;
@@ -720,7 +722,7 @@ address {
   object-fit: cover;
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 1080px) {
   .footer__container {
     flex-direction: column;
     align-items: center;
@@ -730,8 +732,8 @@ address {
   .footer__info {
     padding-top: 0;
     gap: 60px;
-    width: 100%;
     justify-content: space-around;
+    width: 100%;
   }
 }
 
@@ -779,7 +781,7 @@ address {
   align-items: center;
   gap: 45px;
   padding-top: 80px;
-  padding-bottom: 102px;
+  padding-bottom: 100px;
 }
 
 .our-pets__heading {
@@ -794,7 +796,18 @@ address {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: auto;
-  gap: 30px 40px;
+  row-gap: 30px;
+  column-gap: 40px;
+  /*row-gap: clamp(
+    20px,
+    20px + (30 - 20) * ((100vw - 1200px) / (1280 - 1200)),
+    30px
+  );
+  column-gap: clamp(
+    20px,
+    20px + (40 - 20) * ((100vw - 1200px) / (1280 - 1200)),
+    40px
+  );*/
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -823,4 +836,32 @@ address {
   color: #cdcdcd;
   border-color: #cdcdcd;
   pointer-events: none;
+}
+
+@media (max-width: 1279px) {
+  .our-pets__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .our-pets__card:nth-child(7),
+  .our-pets__card:nth-child(8) {
+    display: none;
+  }
+}
+
+@media (max-width: 979px) {
+  .our-pets__cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-pets__container {
+    gap: 30px;
+    padding-bottom: 75px;
+  }
+}
+
+@media (max-width: 480px) {
 }

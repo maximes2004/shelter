@@ -243,6 +243,72 @@ address {
   cursor: default;
 }
 
+/*burger-menu*/
+.header__burger-wrapper {
+  display: none;
+}
+
+.header__burger-btn {
+  position: relative;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__burger-dash {
+  /*position: absolute;*/
+  width: 100%;
+  height: 0;
+  border-radius: 1px;
+  transition: transform 0.3s ease;
+}
+
+.header__burger-dash--index {
+  border: 1px solid #f1cdb3;
+}
+
+.header__burger-dash--our-pets {
+  border: 1px solid #000000;
+}
+
+/*.header__burger-dash:first-child {
+  transform: translateY(-4px);
+}
+
+.header__burger-dash:last-child {
+  transform: translateY(4px);
+}
+*/
+
+@media (max-width: 767px) {
+  .header__burger-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .header__nav {
+    position: fixed;
+    top: 64px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background-color: #ffffff;
+    transition: right 0.5s ease-in-out;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 16%;
+    line-height: 1.5;
+  }
+}
+
 /*hero section in header*/
 .hero__container {
   display: flex;

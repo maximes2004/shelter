@@ -302,10 +302,13 @@ address {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 16%;
-    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__top-container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -372,7 +375,11 @@ address {
     padding-bottom: 0;
   }
   .hero__img {
-    max-width: 569px;
+    max-width: clamp(
+      260px,
+      260px + (569 - 260) * ((100vw - 320px) / (768 - 320)),
+      569px
+    );
     align-self: flex-end;
     padding-top: 57px;
   }
@@ -382,6 +389,17 @@ address {
 }
 
 @media (max-width: 480px) {
+  .hero__heading {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  .hero__subheading {
+    text-align: center;
+  }
+  .hero__img {
+    padding-top: 62px;
+  }
 }
 
 /*about section*/
@@ -389,13 +407,18 @@ address {
   display: flex;
   gap: clamp(42px, 42px + (120 - 42) * ((100vw - 768px) / (1280 - 768)), 120px);
   justify-content: center;
-  padding: 80px 40px 100px 40px;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .about__img {
-  width: 300px;
-  height: 408px;
-  object-fit: cover;
+  width: clamp(
+    260px,
+    260px + (300 - 260) * ((100vw - 320px) / (768 - 320)),
+    300px
+  );
+  height: auto;
+  object-fit: contain;
 }
 
 .about__content {
@@ -435,6 +458,24 @@ address {
 }
 
 @media (max-width: 480px) {
+  .about__container {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    gap: 42px;
+  }
+  .about__content {
+    gap: 22px;
+  }
+  .about__heading {
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 3px;
+  }
+  .about__paragraph {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+  }
 }
 
 /*pets section*/
@@ -447,7 +488,8 @@ address {
   gap: 60px;
   flex-direction: column;
   align-items: center;
-  padding: 80px 40px 100px 40px;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .pets__heading {
@@ -553,9 +595,6 @@ address {
   .pets__card:nth-child(3) {
     display: none;
   }
-}
-
-@media (max-width: 768px) {
   .pets__cards-wrapper {
     gap: 40px;
   }
@@ -564,7 +603,61 @@ address {
   }
 }
 
+/*@media (max-width: 999px) {
+  .pets__slider {
+    gap: clamp(
+      12px,
+      12px + (40 - 12) * ((100vw - 768px) / (999 - 768)),
+      40px
+    );
+  }
+  .pets__cards-wrapper {
+    display: flex;
+    gap: clamp(
+      20px,
+      20px + (60 - 20) * ((100vw - 768px) / (999 - 768)),
+      60px
+    );
+  }
+}*/
+
+@media (max-width: 768px) {
+  .pets__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets__card:nth-child(2) {
+    display: none;
+  }
+  .pets__slider {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pets-arrow--left {
+    order: 2;
+  }
+  .pets-arrow--right {
+    order: 3;
+  }
+  .pets__cards-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .pets__card:nth-child(2) {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
+  .pets__heading {
+    font-size: 25px;
+  }
 }
 
 /*help section*/

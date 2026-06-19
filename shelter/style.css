@@ -1135,5 +1135,35 @@ address {
   }
 }
 
+@media (max-width: 640px) {
+  .our-pets__cards {
+    grid-template-columns: 1fr;
+  }
+  .our-pets__card:nth-child(4),
+  .our-pets__card:nth-child(5),
+  .our-pets__card:nth-child(6) {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
+  .our-pets__container {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    gap: 42px;
+  }
+  .our-pets__heading {
+    font-size: 25px;
+    height: 64px;
+  }
+  .our-pets__cards {
+    gap: 30px;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 379px) {
+  .our-pets__nav {
+    gap: 10px;
+  }
 }

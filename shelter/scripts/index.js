@@ -1,4 +1,4 @@
-const selfAssessment = `Maximum score: 110 points. 110/110
+/*const selfAssessment = `Maximum score: 110 points. 110/110
 
 Main page (70 points)
 
@@ -42,4 +42,9 @@ Interactivity - +10. 10/10
 The Our pets navigation item is highlighted and non-interactive; the other navigation items are interactive; pagination buttons show correct enabled/disabled state; smooth anchor scrolling works; and all page links behave per the Page links and navigation section +5
 Each pet card in Our Friends is interactive when hovering over any area of the card; links and buttons have hover/active styling beyond cursor: pointer; visual changes are smooth and do not affect neighboring elements +5`
 
-console.log(selfAssessment);
+console.log(selfAssessment);*/
+
+import { initBurger } from "./burger.js";
+
+// Запускаем инициализацию бургера
+initBurger();

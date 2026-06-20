@@ -243,68 +243,6 @@ address {
   cursor: default;
 }
 
-/*burger-menu*/
-.header__burger-wrapper {
-  display: none;
-}
-
-.header__burger-btn {
-  position: relative;
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header__burger-dash {
-  /*position: absolute;*/
-  width: 100%;
-  height: 0;
-  border-radius: 1px;
-  transition: transform 0.3s ease;
-}
-
-.header__burger-dash--index {
-  border: 1px solid #f1cdb3;
-}
-
-.header__burger-dash--our-pets {
-  border: 1px solid #000000;
-}
-
-/*.header__burger-dash:first-child {
-  transform: translateY(-4px);
-}
-
-.header__burger-dash:last-child {
-  transform: translateY(4px);
-}
-*/
-
-@media (max-width: 767px) {
-  .header__burger-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  .header__nav {
-    position: fixed;
-    top: 64px;
-    right: -100%;
-    width: 100%;
-    height: calc(100vh - 64px);
-    background-color: #ffffff;
-    transition: right 0.5s ease-in-out;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 @media (max-width: 480px) {
   .header__top-container {
     padding-left: 10px;
@@ -1166,4 +1104,120 @@ address {
   .our-pets__nav {
     gap: 10px;
   }
+}
+
+/*burger-menu*/
+.header__burger-wrapper {
+  display: none;
+}
+
+.header__burger-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header__burger-dash {
+  width: 30px;
+  height: 0;
+  border-radius: 1px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.header__burger-dash--index {
+  border: 1px solid #f1cdb3;
+}
+
+.header__burger-dash--our-pets {
+  border: 1px solid #000000;
+}
+
+.header__burger-checkbox:checked
+  + .header__burger-btn
+  .header__burger-dash--our-pets {
+  border-color: #f1cdb3;
+}
+
+.header__burger-checkbox:checked
+  + .header__burger-btn
+  .header__burger-dash:first-child {
+  transform: translateX(11px) translateY(10px) rotate(90deg);
+}
+
+.header__burger-checkbox:checked
+  + .header__burger-btn
+  .header__burger-dash:nth-child(2) {
+  transform: translateX(0) translateY(0) rotate(-90deg);
+}
+
+.header__burger-checkbox:checked
+  + .header__burger-btn
+  .header__burger-dash:last-child {
+  transform: translateX(-11px) translateY(-10px) rotate(-90deg);
+}
+
+@media (max-width: 767px) {
+  .header__burger-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background-color: #292929;
+    transition: right 0.5s ease-in-out;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__nav-list {
+    flex-direction: column;
+    gap: 40px;
+    /*z-index: 1;*/
+  }
+  .header__nav-link {
+    font-size: 32px;
+    color: #cdcdcd;
+  }
+  .header__nav-link--current {
+    color: #fafafa;
+  }
+  .header__nav-link--our-pets:not(.header__nav-link--pets-current):hover {
+    color: #fafafa;
+  }
+  .header__nav-item {
+    height: 51px;
+    display: flex;
+    justify-content: center;
+  }
+  .header__nav-item:has(.header__nav-link--current) {
+    height: 54px;
+  }
+}
+
+body:has(.header__burger-checkbox:checked) {
+  overflow: hidden; /*remove scrolling when checked*/
+}
+
+.header:has(.header__burger-checkbox:checked) .header__nav {
+  right: 0;
+}
+
+/*Когда чекбокс получает фокус через клавиатуру...*/
+.header__burger-checkbox:focus-visible + .header__burger-btn {
+  outline: 2px solid #ff4646; /*...рисуем обводку вокруг кнопки-лейбла*/
+  outline-offset: 4px; /*Отступ обводки от иконки, чтобы не прилипала*/
+  border-radius: 2px;
 }

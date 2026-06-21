@@ -45,6 +45,10 @@ Each pet card in Our Friends is interactive when hovering over any area of the c
 console.log(selfAssessment);*/
 
 import { initBurger } from "./burger.js";
+import { initCarousel } from './carousel.js';
 
 // Запускаем инициализацию бургера
 initBurger();
+
+// Запускаем слайдер при загрузке страницы
+initCarousel();

@@ -11,3 +11,24 @@ export function shuffle(array) {
   
   return shuffledArray;
 }
+
+// Функция shuffle уже есть, оставляем её без изменений...
+
+export function generate48Pets(allPets) {
+  let result = [];
+  
+  for (let i = 0; i < 6; i++) {
+    let currentChunk = shuffle([...allPets]);
+    
+    // Если это не первый кусочек и на стыке образуется дубль
+    if (result.length > 0 && result[result.length - 1].name === currentChunk[0].name) {
+      // Меняем первый элемент текущего куска с его же случайным другим элементом
+      const swapIndex = Math.floor(Math.random() * 7) + 1; // от 1 до 7
+      [currentChunk[0], currentChunk[swapIndex]] = [currentChunk[swapIndex], currentChunk[0]];
+    }
+    
+    result = result.concat(currentChunk);
+  }
+  
+  return result;
+}

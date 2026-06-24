@@ -46,9 +46,12 @@ console.log(selfAssessment);*/
 
 import { initBurger } from "./burger.js";
 import { initCarousel } from './carousel.js';
+import { initPagination } from './pagination.js';
 
 // Запускаем инициализацию бургера
 initBurger();
 
 // Запускаем слайдер при загрузке страницы
 initCarousel();
+
+initPagination();

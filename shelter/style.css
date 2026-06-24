@@ -1050,6 +1050,8 @@ address {
   );*/
   padding-top: 15px;
   padding-bottom: 15px;
+  transition: opacity 0.3s ease-in-out; /*Добавлено на этапе 3*/
+  will-change: opacity; /*Добавлено на этапе 3*/
 }
 
 .our-pets__nav {

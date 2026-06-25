@@ -24,10 +24,10 @@ function createPopupContentHtml(pet) {
       <h4 class="popup__subtitle">${pet.type} - ${pet.breed}</h4>
       <p class="popup__description">${pet.description}</p>
       <ul class="popup__list">
-        <li><strong>Age:</strong> ${pet.age}</li>
-        <li><strong>Inoculations:</strong> ${pet.inoculations.join(', ')}</li>
-        <li><strong>Diseases:</strong> ${pet.diseases.join(', ')}</li>
-        <li><strong>Parasites:</strong> ${pet.parasites.join(', ')}</li>
+        <li class="popup__list-item"><strong>Age:</strong> ${pet.age}</li>
+        <li class="popup__list-item"><strong>Inoculations:</strong> ${pet.inoculations.join(', ')}</li>
+        <li class="popup__list-item"><strong>Diseases:</strong> ${pet.diseases.join(', ')}</li>
+        <li class="popup__list-item"><strong>Parasites:</strong> ${pet.parasites.join(', ')}</li>
       </ul>
     </div>
   `;

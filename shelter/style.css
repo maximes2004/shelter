@@ -1253,3 +1253,97 @@ body:has(.header__burger-checkbox:checked) {
   outline-offset: 4px; /*Отступ обводки от иконки, чтобы не прилипала*/
   border-radius: 2px;
 }
+
+/*Modal*/
+/* Блокировка скролла страницы при открытом поп-апе */
+.popup-open {
+  overflow: hidden;
+}
+
+/* --- БЛОК POPUP (Затемненный фон-задник) --- */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6); /* Затемнение по макету */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+/* МОДИФИКАТОР: Активация поп-апа через JS */
+.popup--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- ЭЛЕМЕНТЫ БЛОКА POPUP --- */
+
+/* Контейнер самого окна */
+.popup__container {
+  position: relative;
+  background: #ffffff;
+  border-radius: 9px;
+  width: 100%;
+  max-width: 900px; /* Десктопный размер по макету */
+  box-shadow: 0px 2px 35px rgba(13, 13, 13, 0.04);
+  display: flex;
+}
+
+/* Кнопка закрытия за пределами/на углу окна */
+.popup__close-btn {
+  position: absolute;
+  top: -52px; /* По макету кнопка висит над окном справа */
+  right: -52px;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transition: background 0.3s;
+}
+
+.popup__close-btn:hover {
+  background: #f1cdb3;
+}
+
+/* Внутренняя сетка контента */
+.popup__content {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+/* --- АДАПТИВНОСТЬ ПО ТЗ --- */
+
+/* Планшет (768px) */
+@media (max-width: 1279px) {
+  .popup__container {
+    max-width: 630px;
+  }
+  .popup__close-btn {
+    right: -10px; /* Сдвигаем ближе на планшетах, чтобы не вылетала за экран */
+  }
+}
+
+/* Мобильный (320px) */
+@media (max-width: 767px) {
+  .popup__container {
+    max-width: 240px;
+    flex-direction: column; /* Картинка сверху, текст снизу */
+  }
+  .popup__close-btn {
+    right: -15px;
+  }
+}

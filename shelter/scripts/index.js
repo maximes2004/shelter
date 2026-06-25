@@ -47,6 +47,7 @@ console.log(selfAssessment);*/
 import { initBurger } from "./burger.js";
 import { initCarousel } from './carousel.js';
 import { initPagination } from './pagination.js';
+import { initPopup } from './popup.js';
 
 // Запускаем инициализацию бургера
 initBurger();
@@ -55,3 +56,6 @@ initBurger();
 initCarousel();
 
 initPagination();
+
+initPopup(); // Поп-ап готов слушать клики по карточкам из пагинации!
+

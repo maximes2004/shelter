@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
+    <script type="module" src="scripts/index.js"></script>
   </head>
   <body>
     <header class="header header--our-pets">
@@ -28,9 +28,15 @@
               class="header__burger-checkbox visually-hidden"
             >
             <label for="burger-checkbox" class="header__burger-btn">
-              <span class="header__burger-dash"></span>
-              <span class="header__burger-dash"></span>
-              <span class="header__burger-dash"></span>
+              <span
+                class="header__burger-dash header__burger-dash--our-pets"
+              ></span>
+              <span
+                class="header__burger-dash header__burger-dash--our-pets"
+              ></span>
+              <span
+                class="header__burger-dash header__burger-dash--our-pets"
+              ></span>
             </label>
           </div>
           <nav class="header__nav">
@@ -45,7 +51,7 @@
               <li class="header__nav-item">
                 <a
                   href="#"
-                  class="header__nav-link header__nav-link--our-pets header__nav-link--pets-current"
+                  class="header__nav-link header__nav-link--our-pets header__nav-link--current header__nav-link--pets-current"
                   >Our pets</a
                 >
               </li>
@@ -76,7 +82,7 @@
             are looking for a house
           </h1>
           <div class="our-pets__cards">
-            <div class="our-pets__card pet-card">
+            <!--<div class="our-pets__card pet-card">
               <img
                 class="pet-card__img"
                 src="img/pets-katrine.png"
@@ -147,7 +153,7 @@
               >
               <h2 class="pet-card__name">Freddie</h2>
               <button class="btn pet-card__btn">Learn more</button>
-            </div>
+            </div>-->
           </div>
           <nav class="our-pets__nav">
             <button
@@ -178,8 +184,9 @@
         <address class="footer__info">
           <div class="footer__contacts">
             <p class="footer__title footer__title-1">
-              For questions <br>
-              and suggestions
+              For questions <br class="footer__br footer__br--widescreen">
+              and <br class="footer__br footer__br--mobile">
+              suggestions
             </p>
             <a
               class="footer__item footer__item-single"
@@ -200,7 +207,9 @@
           </div>
           <div class="footer__addresses">
             <p class="footer__title footer__title-2">
-              We are waiting for your visit
+              We are waiting <br class="footer__br footer__br--widescreen">
+              for <br class="footer__br footer__br--mobile">
+              your visit
             </p>
             <a
               class="footer__item footer__item-double"
@@ -234,5 +243,17 @@
         >
       </div>
     </footer>
+    <div class="popup" id="popup-backdrop">
+      <div class="popup__container">
+        <button
+          class="popup__close-btn"
+          id="popup-close-btn"
+          aria-label="Close popup"
+        >
+          &times;
+        </button>
+        <div class="popup__content" id="popup-content"></div>
+      </div>
+    </div>
   </body>
 </html>

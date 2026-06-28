@@ -243,68 +243,6 @@ address {
   cursor: default;
 }
 
-/*burger-menu*/
-.header__burger-wrapper {
-  display: none;
-}
-
-.header__burger-btn {
-  position: relative;
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header__burger-dash {
-  /*position: absolute;*/
-  width: 100%;
-  height: 0;
-  border-radius: 1px;
-  transition: transform 0.3s ease;
-}
-
-.header__burger-dash--index {
-  border: 1px solid #f1cdb3;
-}
-
-.header__burger-dash--our-pets {
-  border: 1px solid #000000;
-}
-
-/*.header__burger-dash:first-child {
-  transform: translateY(-4px);
-}
-
-.header__burger-dash:last-child {
-  transform: translateY(4px);
-}
-*/
-
-@media (max-width: 767px) {
-  .header__burger-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  .header__nav {
-    position: fixed;
-    top: 64px;
-    right: -100%;
-    width: 100%;
-    height: calc(100vh - 64px);
-    background-color: #ffffff;
-    transition: right 0.5s ease-in-out;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 @media (max-width: 480px) {
   .header__top-container {
     padding-left: 10px;
@@ -504,9 +442,20 @@ address {
   gap: clamp(40px, 40px + (53 - 40) * ((100vw - 1200px) / (1280 - 1200)), 53px);
 }
 
+.slider-window {
+  overflow: hidden; /*Добавлено на этапе 3*/
+  width: clamp(
+    930px,
+    930px + (990 - 930) * ((100vw - 1200px) / (1280 - 1200)),
+    990px
+  ); /*Добавлено на этапе 3*/
+}
+
 .pets__cards-wrapper {
   display: flex;
   gap: clamp(60px, 60px + (90 - 60) * ((100vw - 1200px) / (1280 - 1200)), 90px);
+  will-change: transform; /* Подсказка браузеру для оптимизации */
+  transform: translate3d(0, 0, 0);
 }
 
 .pet-card {
@@ -518,6 +467,7 @@ address {
   min-width: 270px;
   min-height: 435px;
   border-radius: 9px;
+  overflow: hidden;
   padding-bottom: 30px;
   outline: 2px solid transparent;
 }
@@ -565,6 +515,7 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px 14px;
+  flex-shrink: 0;
 }
 
 .pets-arrow:not(.pets-arrow--inactive):hover {
@@ -592,9 +543,9 @@ address {
 }
 
 @media (max-width: 1199px) {
-  .pets__card:nth-child(3) {
+  /*.pets__card:nth-child(3) {
     display: none;
-  }
+  }*/
   .pets__cards-wrapper {
     gap: 40px;
   }
@@ -621,22 +572,38 @@ address {
   }
 }*/
 
+@media (max-width: 1199px) {
+  .pets__slider {
+    column-gap: clamp(
+      14px,
+      14px + (40 - 14) * ((100vw - 768px) / (1199 - 768)),
+      40px
+    );
+  }
+  .slider-window {
+    width: 580px;
+  }
+}
+
 @media (max-width: 768px) {
 }
 
 @media (max-width: 767px) {
-  .pets__card:nth-child(2) {
+  /*.pets__card:nth-child(2) {
     display: none;
-  }
+  }*/
   .pets__slider {
     column-gap: 22px;
+  }
+  .slider-window {
+    width: 270px;
   }
 }
 
 @media (max-width: 640px) {
-  .pets__card:nth-child(2) {
+  /*.pets__card:nth-child(2) {
     display: none;
-  }
+  }*/
 }
 
 @media (max-width: 480px) {
@@ -650,6 +617,7 @@ address {
     height: 64px;
   }
   .pets__slider {
+    width: 270px;
     row-gap: 20px;
     column-gap: 80px;
     flex-wrap: wrap;
@@ -662,8 +630,9 @@ address {
     order: 3;
   }
   .pets__cards-wrapper {
+    /*width: auto;*/
     width: 100%;
-    justify-content: center;
+    /*justify-content: center;*/
   }
 }
 
@@ -1082,6 +1051,8 @@ address {
   );*/
   padding-top: 15px;
   padding-bottom: 15px;
+  transition: opacity 0.3s ease-in-out; /*Добавлено на этапе 3*/
+  will-change: opacity; /*Добавлено на этапе 3*/
 }
 
 .our-pets__nav {
@@ -1165,5 +1136,295 @@ address {
 @media (max-width: 379px) {
   .our-pets__nav {
     gap: 10px;
+  }
+}
+
+/*burger-menu*/
+.header__burger-wrapper {
+  display: none;
+}
+
+.header__burger-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header__burger-dash {
+  width: 30px;
+  height: 0;
+  border-radius: 1px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.header__burger-dash--index {
+  border: 1px solid #f1cdb3;
+}
+
+.header__burger-dash--our-pets {
+  border: 1px solid #000000;
+}
+
+.header__burger-checkbox:checked
+  + .header__burger-btn
+  .header__burger-dash--our-pets {
+  border-color: #f1cdb3;
+}
+
+.header__burger-checkbox:checked
+  + .header__burger-btn
+  .header__burger-dash:first-child {
+  transform: translateX(11px) translateY(10px) rotate(90deg);
+}
+
+.header__burger-checkbox:checked
+  + .header__burger-btn
+  .header__burger-dash:nth-child(2) {
+  transform: translateX(0) translateY(0) rotate(-90deg);
+}
+
+.header__burger-checkbox:checked
+  + .header__burger-btn
+  .header__burger-dash:last-child {
+  transform: translateX(-11px) translateY(-10px) rotate(-90deg);
+}
+
+@media (max-width: 767px) {
+  .header__burger-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background-color: #292929;
+    transition: right 0.5s ease-in-out;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__nav-list {
+    flex-direction: column;
+    gap: 40px;
+    /*z-index: 1;*/
+  }
+  .header__nav-link {
+    font-size: 32px;
+    color: #cdcdcd;
+  }
+  .header__nav-link--current {
+    color: #fafafa;
+  }
+  .header__nav-link--our-pets:not(.header__nav-link--pets-current):hover {
+    color: #fafafa;
+  }
+  .header__nav-item {
+    height: 51px;
+    display: flex;
+    justify-content: center;
+  }
+  .header__nav-item:has(.header__nav-link--current) {
+    height: 54px;
+  }
+}
+
+body:has(.header__burger-checkbox:checked) {
+  overflow: hidden; /*remove scrolling when checked*/
+}
+
+.header:has(.header__burger-checkbox:checked) .header__nav {
+  right: 0;
+}
+
+/*Когда чекбокс получает фокус через клавиатуру...*/
+.header__burger-checkbox:focus-visible + .header__burger-btn {
+  outline: 2px solid #ff4646; /*...рисуем обводку вокруг кнопки-лейбла*/
+  outline-offset: 4px; /*Отступ обводки от иконки, чтобы не прилипала*/
+  border-radius: 2px;
+}
+
+/*Modal*/
+.popup-open {
+  overflow: hidden; /*Блокировка скролла страницы при открытом поп-апе*/
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6); /*Затемнение по макету*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.popup--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup__container {
+  position: relative;
+  background: #ffffff;
+  border-radius: 9px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0px 2px 35px rgba(13, 13, 13, 0.04);
+  display: flex;
+}
+
+.popup__img {
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  max-width: 500px;
+  width: 500px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.popup__close-btn {
+  position: absolute;
+  top: -52px;
+  right: -42px;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  line-height: 1;
+  transition: background 0.3s;
+}
+
+.popup__close-btn:hover {
+  background: #f1cdb3;
+}
+
+.popup__content {
+  display: flex;
+  gap: 29px;
+  width: 100%;
+}
+
+.popup__text-block {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px 0 0;
+}
+
+.popup__title {
+  font-size: 35px;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  color: #000000;
+  padding-bottom: 10px;
+  height: 55px;
+}
+
+.popup__subtitle {
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  color: #000000;
+  padding-bottom: 40px;
+}
+
+.popup__description {
+  font-size: 15px;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  font-family: "LocalGeorgia", "Georgia", serif;
+  color: #000000;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.popup__list {
+  list-style-type: disc;
+  font-size: 15px;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 14px;
+}
+
+.popup__list-item {
+  color: #000000;
+}
+
+.popup__list-item::marker {
+  color: #f1cdb3;
+}
+
+@media (max-width: 1080px) {
+  .popup__container {
+    max-width: 630px;
+  }
+  .popup__content {
+    gap: 11px;
+  }
+  .popup__text-block {
+    padding: 10px 9px 0 0;
+  }
+  .popup__img {
+    max-width: 350px;
+    width: 350px;
+  }
+  .popup__subtitle {
+    padding-bottom: 18px;
+  }
+  .popup__description {
+    font-size: 13px;
+    padding-bottom: 18px;
+  }
+  .popup__list {
+    gap: 5px;
+  }
+  .popup__close-btn {
+    right: -43px;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup__container {
+    max-width: 240px;
+  }
+  .popup__text-block {
+    padding: 10px;
+  }
+  .popup__img {
+    display: none;
+  }
+  .popup__description {
+    padding-bottom: 24px;
+  }
+  .popup__close-btn {
+    right: -30px;
   }
 }

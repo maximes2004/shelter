@@ -97,7 +97,6 @@ function createCardHtml(pet) {
 
 // --- SLIDER LOGIC ---
 
-// Функция для движения слайдера вправо
 function moveRight() {
   // Если уже идёт анимация, выходим из функции
   if (isAnimating) return;
@@ -171,7 +170,6 @@ function moveRight() {
   );
 }
 
-// Функция для движения слайдера влево
 function moveLeft() {
   // Если уже идёт анимация, выходим из функции
   if (isAnimating) return;

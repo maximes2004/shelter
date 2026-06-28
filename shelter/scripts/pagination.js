@@ -26,7 +26,7 @@ function getMaxPages() {
   return 48 / getCardsPerPage();
 }
 
-// 3. Шаблонизатор карточки (подстроен под твои классы в Our Pets)
+// 3. Шаблонизатор карточки
 function createCardHtml(pet) {
   return `
     <div class="our-pets__card pet-card" data-name="${pet.name}">

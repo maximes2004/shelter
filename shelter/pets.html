@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our pets</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="scripts/index.js"></script>
+  </head>
+  <body>
+    <header class="header header--our-pets">
+      <div class="container header__container header__container--our-pets">
+        <div class="header__top-container">
+          <a class="header__logo-wrapper" href="index.html">
+            <h3 class="header__logo-title header__logo-title--our-pets">
+              Cozy House
+            </h3>
+            <span class="header__logo-subtitle header__logo-subtitle--our-pets"
+              >Shelter for pets in Boston</span
+            >
+          </a>
+          <div class="header__burger-wrapper">
+            <input
+              type="checkbox"
+              id="burger-checkbox"
+              class="header__burger-checkbox visually-hidden"
+            >
+            <label for="burger-checkbox" class="header__burger-btn">
+              <span
+                class="header__burger-dash header__burger-dash--our-pets"
+              ></span>
+              <span
+                class="header__burger-dash header__burger-dash--our-pets"
+              ></span>
+              <span
+                class="header__burger-dash header__burger-dash--our-pets"
+              ></span>
+            </label>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list header__nav-list--our-pets">
+              <li class="header__nav-item">
+                <a
+                  href="index.html"
+                  class="header__nav-link header__nav-link--our-pets"
+                  >About the shelter</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a
+                  href="#"
+                  class="header__nav-link header__nav-link--our-pets header__nav-link--current header__nav-link--pets-current"
+                  >Our pets</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a
+                  href="index.html#help"
+                  class="header__nav-link header__nav-link--our-pets"
+                  >Help the shelter</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a
+                  href="#contacts"
+                  class="header__nav-link header__nav-link--our-pets"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main main--our-pets">
+      <section class="our-pets">
+        <div class="container our-pets__container">
+          <h1 class="our-pets__heading">
+            Our friends who <br>
+            are looking for a house
+          </h1>
+          <div class="our-pets__cards">
+            <!--<div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-katrine.png"
+                alt="pets-katrine"
+              >
+              <h2 class="pet-card__name">Katrine</h2>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-jennifer.png"
+                alt="pets-jennifer"
+              >
+              <h2 class="pet-card__name">Jennifer</h2>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-woody.png"
+                alt="pets-woody"
+              >
+              <h2 class="pet-card__name">Woody</h2>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-sophia.png"
+                alt="pets-sophia"
+              >
+              <h2 class="pet-card__name">Sophia</h2>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-timmy.png"
+                alt="pets-timmy"
+              >
+              <h2 class="pet-card__name">Timmy</h2>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-charly.png"
+                alt="pets-charly"
+              >
+              <h2 class="pet-card__name">Charly</h2>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-scarlett.png"
+                alt="pets-scarlett"
+              >
+              <h2 class="pet-card__name">Scarlett</h2>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>
+            <div class="our-pets__card pet-card">
+              <img
+                class="pet-card__img"
+                src="img/pets-freddie.png"
+                alt="pets-freddie"
+              >
+              <h2 class="pet-card__name">Freddie</h2>
+              <button class="btn pet-card__btn">Learn more</button>
+            </div>-->
+          </div>
+          <nav class="our-pets__nav">
+            <button
+              class="pets-arrow pets-arrow--our-pets pets-arrow--tostart pets-arrow--inactive"
+            >
+              &lt;&lt;
+            </button>
+            <button
+              class="pets-arrow pets-arrow--our-pets pets-arrow--prev pets-arrow--inactive"
+            >
+              &lt;
+            </button>
+            <span class="pets-arrow pets-arrow--our-pets pets-arrow--page"
+              >1</span
+            >
+            <button class="pets-arrow pets-arrow--our-pets pets-arrow--next">
+              >
+            </button>
+            <button class="pets-arrow pets-arrow--our-pets pets-arrow--toend">
+              >>
+            </button>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <footer id="contacts" class="footer">
+      <div class="container footer__container">
+        <address class="footer__info">
+          <div class="footer__contacts">
+            <p class="footer__title footer__title-1">
+              For questions <br class="footer__br footer__br--widescreen">
+              and <br class="footer__br footer__br--mobile">
+              suggestions
+            </p>
+            <a
+              class="footer__item footer__item-single"
+              href="mailto:email@shelter.com"
+              ><img
+                class="footer__ico"
+                src="img/icon-mail.png"
+                alt="icon-email"
+              >email@shelter.com</a
+            >
+            <a class="footer__item footer__item-single" href="tel:+136745677554"
+              ><img
+                class="footer__ico"
+                src="img/icon-phone.png"
+                alt="icon-phone"
+              >+13 674 567 75 54</a
+            >
+          </div>
+          <div class="footer__addresses">
+            <p class="footer__title footer__title-2">
+              We are waiting <br class="footer__br footer__br--widescreen">
+              for <br class="footer__br footer__br--mobile">
+              your visit
+            </p>
+            <a
+              class="footer__item footer__item-double"
+              href="https://www.google.com/maps/search/?api=1&query=1+Central+Street,+Boston"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="footer__ico"
+                src="img/icon-marker.png"
+                alt="icon-marker"
+              >1 Central Street, Boston <br>
+              (entrance from the store)</a
+            >
+            <a
+              class="footer__item footer__item-single"
+              href="https://www.google.com/maps/search/?api=1&query=18+South+Park,+London"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="footer__ico"
+                src="img/icon-marker.png"
+                alt="icon-marker"
+              >18 South Park, London</a
+            >
+          </div>
+        </address>
+        <img
+          class="footer__puppy"
+          src="img/footer-puppy.png"
+          alt="footer-puppy"
+        >
+      </div>
+    </footer>
+    <div class="popup" id="popup-backdrop">
+      <div class="popup__container">
+        <button
+          class="popup__close-btn"
+          id="popup-close-btn"
+          aria-label="Close popup"
+        >
+          &times;
+        </button>
+        <div class="popup__content" id="popup-content"></div>
+      </div>
+    </div>
+  </body>
+</html>
